@@ -1,4 +1,9 @@
 AWSTemplateFormatVersion: "2010-09-09"
+Parameters: 
+  KeyName:
+    Description: The EC2 Key Pair to allow SSH access to the instance
+    Type: "AWS::EC2::KeyPair::KeyName"
+
 Resources:
   MyVPC:
     Type: AWS::EC2::VPC
@@ -84,7 +89,7 @@ Resources:
     Type: AWS::EC2::Instance
     Properties: 
       ImageId: ami-00d101850e971728d
-      KeyName: !Ref KeyName
+      KeyName: test_ec2.pem
       InstanceType: t2.micro
       NetworkInterfaces: 
         - AssociatePublicIpAddress: "true"
@@ -114,7 +119,7 @@ Resources:
     Type: AWS::EC2::Instance
     Properties: 
       ImageId: ami-00d101850e971728d
-      KeyName: !Ref KeyName
+      KeyName: test_ec2.pem
       InstanceType: t2.micro
       NetworkInterfaces: 
         - AssociatePublicIpAddress: "true"
@@ -125,3 +130,4 @@ Resources:
       Tags:
           - Key: Name
             Value: EC2b
+
