@@ -105,7 +105,7 @@ Resources:
           sudo service jenkins start
       Tags:
           - Key: Name
-            Value: EC2a
+            Value: EC2c
 
 
 
@@ -124,5 +124,5 @@ Resources:
             - !Ref MyEC2SG
       Tags:
           - Key: Name
-            Value: EC2b
+            Value: EC2d
 
