@@ -80,7 +80,7 @@ Resources:
         - IpProtocol: -1
           CidrIp: 0.0.0.0/0
 
-  EC2a: 
+  EC2a2: 
     Type: AWS::EC2::Instance
     Properties: 
       ImageId: ami-00d101850e971728d
@@ -110,7 +110,7 @@ Resources:
 
 
 
-  EC2b: 
+  EC2b2: 
     Type: AWS::EC2::Instance
     Properties: 
       ImageId: ami-00d101850e971728d
